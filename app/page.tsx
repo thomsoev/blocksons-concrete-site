@@ -1,65 +1,297 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Phone, ArrowRight, Waves, Building2, Layers, HardHat, CheckCircle, MapPin } from "lucide-react";
+import GoogleRatingBadge from "./components/GoogleRatingBadge";
+import ReviewCard from "./components/ReviewCard";
+import ServiceCard from "./components/ServiceCard";
+import BoomPumpExplainer from "./components/BoomPumpExplainer";
+
+export const metadata: Metadata = {
+  title: "Concrete Boom Pump Truck | Plattsburgh, NY | Blocksons Concrete",
+  description:
+    "Boom pump truck service for seawalls, foundations, elevated decks, and hard-to-reach pours. Serving Plattsburgh and Clinton County, NY. Call (518) 570-3076.",
+};
+
+const services = [
+  {
+    icon: Waves,
+    title: "Seawalls",
+    description:
+      "Boom arm reaches over waterfront obstacles for precision placement along seawalls and retaining walls.",
+    href: "/services",
+  },
+  {
+    icon: Building2,
+    title: "Foundations & Slabs",
+    description:
+      "Pump directly into formed foundations and basement floors — faster and cleaner than wheelbarrow or chute.",
+    href: "/services",
+  },
+  {
+    icon: Layers,
+    title: "Elevated & Hard-to-Reach",
+    description:
+      "Second-story decks, elevated platforms, and structural pours that chute trucks simply can't serve.",
+    href: "/services",
+  },
+  {
+    icon: HardHat,
+    title: "Residential & Commercial",
+    description:
+      "Large-volume commercial slabs, tight residential lots, and anywhere a standard mixer truck would cause damage.",
+    href: "/services",
+  },
+];
+
+const reviews = [
+  {
+    name: "Brandon Craft",
+    timeAgo: "1 year ago",
+    excerpt:
+      "Highly recommend Blocksons for tree service work! Dustin was great to work with and is a true master of his trade. We had a large, precarious tree partially over hanging the home we recently purchased and there was no room to fit equipment…",
+  },
+  {
+    name: "Laura Leavine",
+    timeAgo: "2 years ago",
+    excerpt:
+      "Dustin is amazing. He cut down both of these huge trees. He is very professional and cleans up the area. Thank you Dustin. I don't have to worry about these trees this winter. I would highly recommend Dustin.",
+  },
+  {
+    name: "Andrew Krug",
+    timeAgo: "2 years ago",
+    excerpt:
+      "Dustin was great to work with, from coming out for the estimate, having a formal estimate (professional document) and all the way through clean up after tree removal. I highly recommend and appreciate his follow-through, honesty, and professionalism.",
+  },
+];
+
+const whyUs = [
+  {
+    icon: CheckCircle,
+    title: "Specialized Equipment",
+    body: "A truck-mounted boom pump is rare in this region. Most contractors don't have one — Dustin does.",
+  },
+  {
+    icon: MapPin,
+    title: "Local & Reliable",
+    body: "Based in Morrisonville. Serving Plattsburgh and surrounding Clinton County with fast response times.",
+  },
+  {
+    icon: CheckCircle,
+    title: "Trusted 5.0 Rating",
+    body: "Same owner as Blocksons LLC — 49 five-star Google reviews across his businesses.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      {/* ── Hero ── */}
+      <section className="relative bg-[#111111] overflow-hidden">
+        {/* Placeholder image slot */}
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-[#1C1C1E] via-[#111111] to-[#0a0a0a] opacity-80"
+          aria-hidden="true"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+        {/* Concrete texture overlay */}
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)",
+          }}
+          aria-hidden="true"
+        />
+        {/* TODO: Replace this placeholder with a real boom pump truck photo from Dustin */}
+        <div
+          className="relative w-full min-h-[620px] flex items-center"
+          role="img"
+          aria-label="Boom pump truck placing concrete on seawall in Plattsburgh NY — photo coming soon"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+            <div className="max-w-3xl">
+              <GoogleRatingBadge className="mb-8" />
+              <h1
+                className="text-5xl sm:text-6xl lg:text-7xl font-bold uppercase leading-none text-white mb-6 tracking-tight"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              >
+                Precision Concrete
+                <br />
+                <span className="text-[#E07820]">Placement —</span>
+                <br />
+                Anywhere.
+              </h1>
+              <p className="text-lg text-white/70 mb-10 max-w-xl leading-relaxed">
+                Boom pump truck service for hard-to-reach pours. Seawalls, foundations, decks,
+                and more — serving Plattsburgh and Clinton County.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-[#E07820] text-white font-semibold text-sm uppercase tracking-wider px-8 py-4 hover:bg-[#C4631A] transition-colors rounded"
+                >
+                  Request a Quote <ArrowRight size={16} />
+                </Link>
+                <a
+                  href="tel:+15185703076"
+                  className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-semibold text-sm uppercase tracking-wider px-8 py-4 hover:bg-white/5 transition-colors rounded"
+                >
+                  <Phone size={16} />
+                  Call Now: (518) 570-3076
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Boom Pump Explainer ── */}
+      <BoomPumpExplainer />
+
+      {/* ── Services Strip ── */}
+      <section className="bg-[#111111] py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#E07820] mb-2">
+              What We Do
+            </p>
+            <h2
+              className="text-4xl font-bold uppercase text-white"
+              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Services
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((s) => (
+              <ServiceCard key={s.title} {...s} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/services"
+              className="inline-flex items-center gap-2 text-sm text-[#E07820] font-medium hover:underline"
             >
-              Learning
-            </a>{" "}
-            center.
+              View all services <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Why Blocksons ── */}
+      <section className="bg-[#1C1C1E] py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#E07820] mb-2">
+              Why Us
+            </p>
+            <h2
+              className="text-4xl font-bold uppercase text-white"
+              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            >
+              Why Blocksons
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {whyUs.map(({ icon: Icon, title, body }) => (
+              <div key={title} className="text-center">
+                <div className="w-12 h-12 rounded-full bg-[#E07820]/10 flex items-center justify-center mx-auto mb-4">
+                  <Icon size={20} className="text-[#E07820]" />
+                </div>
+                <h3
+                  className="text-xl font-bold uppercase text-white mb-2"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  {title}
+                </h3>
+                <p className="text-[#6B7280] text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Reviews ── */}
+      <section className="bg-[#111111] py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-4">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#E07820] mb-2">
+              What People Say
+            </p>
+            <h2
+              className="text-4xl font-bold uppercase text-white mb-2"
+              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+            >
+              Reviews
+            </h2>
+          </div>
+          <div className="flex justify-center mb-8">
+            <GoogleRatingBadge />
+          </div>
+          <p className="text-center text-xs text-[#6B7280] mb-8">
+            Reviews for owner Dustin across his businesses.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {reviews.map((r) => (
+              <ReviewCard key={r.name} {...r} />
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link
+              href="/reviews"
+              className="inline-flex items-center gap-2 text-sm text-[#E07820] font-medium hover:underline"
+            >
+              See all reviews <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Service Area ── */}
+      <section className="bg-[#1C1C1E] py-12 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <MapPin size={20} className="text-[#E07820] mx-auto mb-3" />
+          <h2
+            className="text-2xl font-bold uppercase text-white mb-2"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+          >
+            Service Area
+          </h2>
+          <p className="text-[#6B7280] text-sm leading-relaxed">
+            Serving Plattsburgh, Morrisonville, Champlain, Peru, Keeseville, and surrounding
+            Clinton County, NY.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      {/* ── Final CTA ── */}
+      <section className="bg-[#E07820] py-16 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2
+            className="text-4xl sm:text-5xl font-bold uppercase text-white mb-4"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Need a boom pump for your next pour?
+          </h2>
+          <p className="text-white/80 mb-8 text-lg">
+            Call for availability or submit a quote request — Dustin will get back to you directly.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-white text-[#E07820] font-bold text-sm uppercase tracking-wider px-8 py-4 hover:bg-[#F4F4F4] transition-colors rounded"
+            >
+              Request a Quote <ArrowRight size={16} />
+            </Link>
+            <a
+              href="tel:+15185703076"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-bold text-sm uppercase tracking-wider px-8 py-4 hover:bg-white/10 transition-colors rounded"
+            >
+              <Phone size={16} />
+              (518) 570-3076
+            </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
