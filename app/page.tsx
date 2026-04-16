@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, ArrowRight, Waves, Building2, Layers, HardHat, CheckCircle, MapPin } from "lucide-react";
 import GoogleRatingBadge from "./components/GoogleRatingBadge";
 import ReviewCard from "./components/ReviewCard";
@@ -87,25 +88,18 @@ export default function Home() {
     <>
       {/* ── Hero ── */}
       <section className="relative bg-[#111111] overflow-hidden">
-        {/* Placeholder image slot */}
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-[#1C1C1E] via-[#111111] to-[#0a0a0a] opacity-80"
-          aria-hidden="true"
+        {/* Stock photo background — swap for Dustin's real equipment photo when available */}
+        <Image
+          src="https://images.pexels.com/photos/36782541/pexels-photo-36782541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1"
+          alt="Concrete boom pump truck with extended arm at a construction site"
+          fill
+          priority
+          className="object-cover object-center"
         />
-        {/* Concrete texture overlay */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage:
-              "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)",
-          }}
-          aria-hidden="true"
-        />
-        {/* TODO: Replace this placeholder with a real boom pump truck photo from Dustin */}
+        {/* Dark overlay so text stays readable */}
+        <div className="absolute inset-0 bg-[#111111]/75" aria-hidden="true" />
         <div
           className="relative w-full min-h-[620px] flex items-center"
-          role="img"
-          aria-label="Boom pump truck placing concrete on seawall in Plattsburgh NY — photo coming soon"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
             <div className="max-w-3xl">
@@ -247,18 +241,33 @@ export default function Home() {
       </section>
 
       {/* ── Service Area ── */}
-      <section className="bg-[#1C1C1E] py-12 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <MapPin size={20} className="text-[#E07820] mx-auto mb-3" />
+      <section className="relative overflow-hidden py-20 px-4">
+        {/* Adirondack lake background */}
+        <Image
+          src="https://images.pexels.com/photos/36398832/pexels-photo-36398832.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&dpr=1"
+          alt="Adirondack lake in the North Country region of New York"
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#111111]/80" aria-hidden="true" />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <MapPin size={22} className="text-[#E07820] mx-auto mb-4" />
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#E07820] mb-3">
+            Where We Work
+          </p>
           <h2
-            className="text-2xl font-bold uppercase text-white mb-2"
+            className="text-4xl sm:text-5xl font-bold uppercase text-white mb-5"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
-            Service Area
+            Serving the North Country
           </h2>
-          <p className="text-[#6B7280] text-sm leading-relaxed">
-            Serving Plattsburgh, Morrisonville, Champlain, Peru, Keeseville, and surrounding
-            Clinton County, NY.
+          <p className="text-white/60 text-base mb-6 leading-relaxed">
+            Plattsburgh · Morrisonville · Champlain · Peru · Keeseville · Rouses Point
+            <br className="hidden sm:block" />
+            · Malone · Saranac Lake · Lake Placid · and surrounding Clinton &amp; Essex Counties
+          </p>
+          <p className="text-[#6B7280] text-sm">
+            Based in Morrisonville, NY — call for availability and service area confirmation.
           </p>
         </div>
       </section>
