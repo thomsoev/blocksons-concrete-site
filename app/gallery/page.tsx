@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Concrete Pumping Gallery | Blocksons Concrete | Plattsburgh NY",
   description:
-    "Photo gallery of boom pump concrete jobs — seawalls, foundations, elevated decks, and commercial slabs in the Plattsburgh and Clinton County area.",
+    "Photo gallery of boom pump concrete jobs — seawalls, foundations, elevated decks, and commercial slabs across the North Country — Clinton, Essex, and Franklin County, NY.",
 };
 
 // Stock photos used until Dustin's real job photos are available.
@@ -74,7 +74,7 @@ export default function GalleryPage() {
             Gallery
           </h1>
           <p className="text-[#6B7280] leading-relaxed">
-            Representative work across Plattsburgh, Lake Champlain, and Clinton County.
+            Representative work across the North Country — Lake Champlain, Clinton, Essex, and Franklin County.
             Real job photos from Dustin will be added as they come in.
           </p>
         </div>

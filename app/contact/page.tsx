@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Request a Concrete Pump Quote | Plattsburgh, NY | Blocksons Concrete",
   description:
-    "Request a concrete boom pump quote from Blocksons Concrete. Serving seawalls, foundations, elevated decks, and commercial slabs in Plattsburgh and Clinton County, NY.",
+    "Request a concrete boom pump quote from Blocksons Concrete. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
 };
 
 const pourTypes = [
@@ -91,7 +91,7 @@ export default function ContactPage() {
                       Morrisonville, NY
                     </p>
                     <p className="text-[#6B7280] text-sm mt-0.5">
-                      Serving Plattsburgh &amp; Clinton County
+                      Serving the North Country
                     </p>
                   </div>
                 </div>

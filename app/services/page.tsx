@@ -5,7 +5,7 @@ import { Waves, Building2, Layers, HardHat, TreePine, ArrowRight, Phone } from "
 export const metadata: Metadata = {
   title: "Concrete Pumping Services | Seawalls, Foundations & More | Blocksons Concrete",
   description:
-    "Boom pump truck services for seawalls, foundations, elevated decks, commercial slabs, and hard-to-access sites. Plattsburgh and Clinton County, NY.",
+    "Boom pump truck services for seawalls, foundations, elevated decks, commercial slabs, and hard-to-access sites. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
 };
 
 const services = [
@@ -16,7 +16,7 @@ const services = [
     description: [
       "Seawall and waterfront concrete work is one of the most access-constrained pours in the industry. Standard truck mixers can't navigate waterfront terrain — a boom pump is often the only practical solution.",
       "Dustin's boom pump arm reaches over seawall obstacles, rocky shorelines, and waterfront landscaping to place concrete precisely along seawalls, retaining walls, and waterfront structures.",
-      "If you're on Lake Champlain or any Clinton County waterfront, this is the equipment your project requires.",
+      "If you're on Lake Champlain or anywhere along the North Country waterfront, this is the equipment your project requires.",
     ],
   },
   {
@@ -78,7 +78,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-[#6B7280] leading-relaxed">
             Boom pump truck service for projects where standard equipment won&apos;t cut it.
-            Serving Plattsburgh and surrounding Clinton County, NY.
+            Serving the North Country — Clinton, Essex, and Franklin County, NY.
           </p>
         </div>
       </section>

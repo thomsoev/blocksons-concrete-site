@@ -16,7 +16,7 @@ export default function Footer() {
             </p>
             <p className="text-[#6B7280] text-sm leading-relaxed">
               Boom pump truck service for precision concrete placement in
-              hard-to-reach locations. Serving Plattsburgh and Clinton County, NY.
+              hard-to-reach locations. Serving the North Country — Clinton, Essex &amp; Franklin County, NY.
             </p>
           </div>
 
@@ -66,7 +66,7 @@ export default function Footer() {
               </a>
               <div className="flex items-center gap-2 text-sm text-white/70">
                 <MapPin size={14} className="text-[#E07820]" />
-                Morrisonville, NY — Serving Clinton County
+                Morrisonville, NY — Serving the North Country
               </div>
             </div>
           </div>

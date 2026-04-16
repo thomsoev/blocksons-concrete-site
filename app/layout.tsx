@@ -6,11 +6,11 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "Concrete Boom Pump Truck | Plattsburgh, NY | Blocksons Concrete",
   description:
-    "Blocksons Concrete provides boom pump truck service for hard-to-reach pours in Plattsburgh, Morrisonville, and Clinton County, NY. Seawalls, foundations, elevated decks, and more.",
+    "Blocksons Concrete provides boom pump truck service for hard-to-reach pours across the North Country — Clinton, Essex, and Franklin County, NY. Seawalls, foundations, elevated decks, and more.",
   openGraph: {
     title: "Blocksons Concrete — Boom Pump Truck Service | Plattsburgh, NY",
     description:
-      "Specialized boom pump truck service for seawalls, foundations, elevated decks, and hard-to-reach pours. Serving Clinton County, NY.",
+      "Specialized boom pump truck service for seawalls, foundations, elevated decks, and hard-to-reach pours. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
     type: "website",
   },
 };
@@ -39,7 +39,7 @@ const localBusinessSchema = {
     reviewCount: "49",
   },
   url: "https://blocksonsconcrete.vercel.app",
-  areaServed: ["Plattsburgh", "Morrisonville", "Clinton County", "NY"],
+  areaServed: ["Plattsburgh", "North Country", "Clinton County", "Essex County", "Franklin County", "NY"],
 };
 
 export default function RootLayout({

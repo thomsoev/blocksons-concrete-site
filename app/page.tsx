@@ -10,7 +10,7 @@ import BoomPumpExplainer from "./components/BoomPumpExplainer";
 export const metadata: Metadata = {
   title: "Concrete Boom Pump Truck | Plattsburgh, NY | Blocksons Concrete",
   description:
-    "Boom pump truck service for seawalls, foundations, elevated decks, and hard-to-reach pours. Serving Plattsburgh and Clinton County, NY. Call (518) 570-3076.",
+    "Boom pump truck service for seawalls, foundations, elevated decks, and hard-to-reach pours. Serving the North Country — Clinton, Essex, and Franklin County, NY. Call (518) 570-3076.",
 };
 
 const services = [
@@ -74,7 +74,7 @@ const whyUs = [
   {
     icon: MapPin,
     title: "Local & Reliable",
-    body: "Based in Morrisonville. Serving Plattsburgh and surrounding Clinton County with fast response times.",
+    body: "Based in Morrisonville. Serving the North Country — Clinton, Essex, and Franklin County — with fast response times.",
   },
   {
     icon: CheckCircle,
@@ -116,7 +116,7 @@ export default function Home() {
               </h1>
               <p className="text-lg text-white/70 mb-10 max-w-xl leading-relaxed">
                 Boom pump truck service for hard-to-reach pours. Seawalls, foundations, decks,
-                and more — serving Plattsburgh and Clinton County.
+                and more — serving the North Country.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -264,7 +264,7 @@ export default function Home() {
           <p className="text-white/60 text-base mb-6 leading-relaxed">
             Plattsburgh · Morrisonville · Champlain · Peru · Keeseville · Rouses Point
             <br className="hidden sm:block" />
-            · Malone · Saranac Lake · Lake Placid · and surrounding Clinton &amp; Essex Counties
+            · Malone · Saranac Lake · Lake Placid · and surrounding Clinton, Essex &amp; Franklin Counties
           </p>
           <p className="text-[#6B7280] text-sm">
             Based in Morrisonville, NY — call for availability and service area confirmation.
