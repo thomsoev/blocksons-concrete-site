@@ -58,11 +58,11 @@ export default function Footer() {
                 (518) 570-3076
               </a>
               <a
-                href="mailto:Blocksonstreeservice@gmail.com"
+                href="mailto:blocksonsconcrete@gmail.com"
                 className="flex items-center gap-2 text-sm text-white/70 hover:text-[#E07820] transition-colors"
               >
                 <Mail size={14} className="text-[#E07820]" />
-                Blocksonstreeservice@gmail.com
+                blocksonsconcrete@gmail.com
               </a>
               <div className="flex items-center gap-2 text-sm text-white/70">
                 <MapPin size={14} className="text-[#E07820]" />

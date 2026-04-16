@@ -67,7 +67,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="mailto:Blocksonstreeservice@gmail.com"
+                  href="mailto:blocksonsconcrete@gmail.com"
                   className="flex items-start gap-3 group"
                 >
                   <div className="w-9 h-9 rounded bg-[#E07820]/10 flex items-center justify-center shrink-0 mt-0.5">
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-xs text-[#6B7280] uppercase tracking-wider mb-0.5">Email</p>
                     <p className="text-white font-medium text-sm group-hover:text-[#E07820] transition-colors break-all">
-                      Blocksonstreeservice@gmail.com
+                      blocksonsconcrete@gmail.com
                     </p>
                   </div>
                 </a>
@@ -102,7 +102,23 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs text-[#6B7280] uppercase tracking-wider mb-0.5">Hours</p>
-                    <p className="text-white font-medium">Call for availability</p>
+                    <p className="text-white font-medium">Mon–Sat · Call ahead to confirm</p>
+                    <p className="text-[#6B7280] text-sm mt-0.5">
+                      Scheduling fills quickly — call early for tight timelines.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded bg-[#E07820]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <MapPin size={16} className="text-[#E07820]" />
+                  </div>
+                  <div>
+                    <p className="text-xs text-[#6B7280] uppercase tracking-wider mb-0.5">Service Area</p>
+                    <p className="text-white font-medium">Clinton, Essex &amp; Franklin County</p>
+                    <p className="text-[#6B7280] text-sm mt-0.5">
+                      Including Plattsburgh, Lake Champlain waterfront, Saranac Lake, Lake Placid, Malone, and surrounding towns. Not sure if we cover you? Just call.
+                    </p>
                   </div>
                 </div>
               </div>

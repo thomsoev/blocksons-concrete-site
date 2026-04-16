@@ -105,11 +105,6 @@ export default function GalleryPage() {
                 >
                   {item.category}
                 </span>
-
-                {/* Label */}
-                <p className="absolute bottom-4 left-4 right-4 text-sm font-semibold text-white leading-tight">
-                  {item.label}
-                </p>
               </div>
             ))}
           </div>

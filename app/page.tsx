@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, ArrowRight, Waves, Building2, Layers, HardHat, CheckCircle, MapPin } from "lucide-react";
+import { Phone, ArrowRight, Waves, Building2, Layers, HardHat, CheckCircle, MapPin, Star } from "lucide-react";
 import GoogleRatingBadge from "./components/GoogleRatingBadge";
-import ReviewCard from "./components/ReviewCard";
 import ServiceCard from "./components/ServiceCard";
 import BoomPumpExplainer from "./components/BoomPumpExplainer";
 
@@ -41,27 +40,6 @@ const services = [
     description:
       "Large-volume commercial slabs, tight residential lots, and anywhere a standard mixer truck would cause damage.",
     href: "/services",
-  },
-];
-
-const reviews = [
-  {
-    name: "Brandon Craft",
-    timeAgo: "1 year ago",
-    excerpt:
-      "Highly recommend Blocksons for tree service work! Dustin was great to work with and is a true master of his trade. We had a large, precarious tree partially over hanging the home we recently purchased and there was no room to fit equipment…",
-  },
-  {
-    name: "Laura Leavine",
-    timeAgo: "2 years ago",
-    excerpt:
-      "Dustin is amazing. He cut down both of these huge trees. He is very professional and cleans up the area. Thank you Dustin. I don't have to worry about these trees this winter. I would highly recommend Dustin.",
-  },
-  {
-    name: "Andrew Krug",
-    timeAgo: "2 years ago",
-    excerpt:
-      "Dustin was great to work with, from coming out for the estimate, having a formal estimate (professional document) and all the way through clean up after tree removal. I highly recommend and appreciate his follow-through, honesty, and professionalism.",
   },
 ];
 
@@ -206,36 +184,87 @@ export default function Home() {
 
       {/* ── Reviews ── */}
       <section className="bg-[#111111] py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-4">
-            <p className="text-xs font-semibold uppercase tracking-widest text-[#E07820] mb-2">
-              What People Say
-            </p>
-            <h2
-              className="text-4xl font-bold uppercase text-white mb-2"
-              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            >
-              Reviews
-            </h2>
-          </div>
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#E07820] mb-2">
+            Reputation
+          </p>
+          <h2
+            className="text-4xl font-bold uppercase text-white mb-6"
+            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+          >
+            Trusted by the North Country
+          </h2>
           <div className="flex justify-center mb-8">
             <GoogleRatingBadge />
           </div>
-          <p className="text-center text-xs text-[#6B7280] mb-8">
-            Reviews for owner Dustin across his businesses.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <ReviewCard key={r.name} {...r} />
+          <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto mb-8">
+            {[
+              { number: "5.0", label: "Star rating" },
+              { number: "49", label: "Google reviews" },
+              { number: "100%", label: "Five-star" },
+            ].map(({ number, label }) => (
+              <div key={label}>
+                <p
+                  className="text-4xl font-bold text-[#E07820]"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  {number}
+                </p>
+                <p className="text-[#6B7280] text-xs mt-1">{label}</p>
+              </div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Link
-              href="/reviews"
-              className="inline-flex items-center gap-2 text-sm text-[#E07820] font-medium hover:underline"
+          <div className="flex items-center justify-center gap-1 mb-6">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} size={18} className="text-yellow-400 fill-yellow-400" />
+            ))}
+          </div>
+          <Link
+            href="/reviews"
+            className="inline-flex items-center gap-2 text-sm text-[#E07820] font-medium hover:underline"
+          >
+            Read the reviews <ArrowRight size={14} />
+          </Link>
+        </div>
+      </section>
+
+      {/* ── About Dustin ── */}
+      <section className="bg-[#1C1C1E] py-16 px-4 border-t border-white/10">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          {/* Photo placeholder */}
+          <div className="flex justify-center md:justify-start">
+            <div className="w-64 h-64 rounded-lg bg-[#111111] border-2 border-dashed border-white/20 flex flex-col items-center justify-center text-center gap-2">
+              <div className="w-16 h-16 rounded-full bg-[#E07820]/10 flex items-center justify-center">
+                <HardHat size={28} className="text-[#E07820]" />
+              </div>
+              <p className="text-[#6B7280] text-xs px-4">Photo of Dustin — coming soon</p>
+            </div>
+          </div>
+          {/* Story */}
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#E07820] mb-3">
+              The Operator
+            </p>
+            <h2
+              className="text-4xl font-bold uppercase text-white mb-5 leading-tight"
+              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
-              See all reviews <ArrowRight size={14} />
-            </Link>
+              Dustin Blockson
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-4">
+              Dustin is a lifelong North Country man. Born and raised here, he&apos;s deeply invested
+              in this region and the people who live and build here. When he takes on a job, he&apos;s
+              not just running equipment — he&apos;s a neighbor showing up for his community.
+            </p>
+            <p className="text-white/70 leading-relaxed mb-4">
+              He&apos;s built his reputation on one thing: going above and beyond, every time.
+              Hard work isn&apos;t a selling point for Dustin — it&apos;s just how he operates.
+              He stays until the job is right, communicates directly, and stands behind his work 100%.
+            </p>
+            <p className="text-white/70 leading-relaxed">
+              That&apos;s the same Dustin behind 49 five-star Google reviews — and the same one
+              showing up on your job site.
+            </p>
           </div>
         </div>
       </section>

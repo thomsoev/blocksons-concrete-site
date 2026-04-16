@@ -20,7 +20,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   name: "Blocksons Concrete",
   telephone: "(518) 570-3076",
-  email: "Blocksonstreeservice@gmail.com",
+  email: "blocksonsconcrete@gmail.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Morrisonville",

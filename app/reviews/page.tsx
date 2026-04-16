@@ -2,36 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import GoogleRatingBadge from "../components/GoogleRatingBadge";
-import ReviewCard from "../components/ReviewCard";
 
 export const metadata: Metadata = {
   title: "5.0 Google Reviews | Blocksons Concrete | Plattsburgh NY",
   description:
     "Blocksons Concrete — same owner as Blocksons LLC, rated 5.0 stars across 49 Google reviews. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
 };
-
-// TODO: If Dustin sets up a separate Google Business listing for the concrete side,
-// update rating badge and link to use the concrete-specific listing.
-const reviews = [
-  {
-    name: "Brandon Craft",
-    timeAgo: "1 year ago",
-    excerpt:
-      "Highly recommend Blocksons for tree service work! Dustin was great to work with and is a true master of his trade. We had a large, precarious tree partially over hanging the home we recently purchased and there was no room to fit equipment…",
-  },
-  {
-    name: "Laura Leavine",
-    timeAgo: "2 years ago",
-    excerpt:
-      "Dustin is amazing. He cut down both of these huge trees. He is very professional and cleans up the area. Thank you Dustin. I don't have to worry about these trees this winter. I would highly recommend Dustin.",
-  },
-  {
-    name: "Andrew Krug",
-    timeAgo: "2 years ago",
-    excerpt:
-      "Dustin was great to work with, from coming out for the estimate, having a formal estimate (professional document) and all the way through clean up after tree removal. I highly recommend and appreciate his follow-through, honesty, and professionalism.",
-  },
-];
 
 export default function ReviewsPage() {
   return (
@@ -86,29 +62,8 @@ export default function ReviewsPage() {
         </div>
       </section>
 
-      {/* Reviews grid */}
-      <section className="bg-[#111111] py-12 px-4">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <ReviewCard key={r.name} {...r} />
-            ))}
-          </div>
-          <div className="text-center mt-8">
-            <a
-              href="https://www.google.com/maps/search/Blocksons+LLC+Morrisonville+NY"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-[#E07820] font-medium hover:underline"
-            >
-              Read all 49 reviews on Google <ExternalLink size={14} />
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Social proof bar */}
-      <section className="bg-[#1C1C1E] border-t border-b border-white/10 py-10 px-4">
+      <section className="bg-[#111111] py-16 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             {[
@@ -127,11 +82,21 @@ export default function ReviewsPage() {
               </div>
             ))}
           </div>
+          <div className="text-center mt-10">
+            <a
+              href="https://www.google.com/maps/search/Blocksons+LLC+Morrisonville+NY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-[#E07820] font-medium hover:underline"
+            >
+              Read all 49 reviews on Google <ExternalLink size={14} />
+            </a>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-[#111111] py-14 px-4">
+      <section className="bg-[#1C1C1E] border-t border-white/10 py-14 px-4">
         <div className="max-w-2xl mx-auto text-center">
           <h2
             className="text-4xl font-bold uppercase text-white mb-4"
