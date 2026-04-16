@@ -66,10 +66,9 @@ export default function Home() {
     <>
       {/* ── Hero ── */}
       <section className="relative bg-[#111111] overflow-hidden">
-        {/* Stock photo background — swap for Dustin's real equipment photo when available */}
         <Image
-          src="https://images.pexels.com/photos/36782541/pexels-photo-36782541.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1"
-          alt="Concrete boom pump truck with extended arm at a construction site"
+          src="/images/hero.jpg"
+          alt="Blocksons Concrete boom pump truck with arm extended over large foundation slab pour at dusk in northern New York"
           fill
           priority
           className="object-cover object-center"

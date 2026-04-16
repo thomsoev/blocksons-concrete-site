@@ -9,9 +9,32 @@ export const metadata: Metadata = {
     "Photo gallery of boom pump concrete jobs — seawalls, foundations, elevated decks, and commercial slabs across the North Country — Clinton, Essex, and Franklin County, NY.",
 };
 
-// Stock photos used until Dustin's real job photos are available.
-// TODO: Replace each src with a real job photo from Dustin. Keep alt text.
 const photos = [
+  {
+    src: "/images/hero.jpg",
+    alt: "Blocksons Concrete boom pump truck with arm extended over large foundation slab pour at dusk in northern New York",
+    label: "Foundation Slab Pour",
+    category: "Foundation",
+  },
+  {
+    src: "/images/truck-night.jpg",
+    alt: "Blocksons LLC Concrete Pumping boom pump truck at night showing full equipment and company decal",
+    label: "Equipment — Truck & Boom",
+    category: "Equipment",
+  },
+  {
+    src: "/images/interior-pour-1.jpg",
+    alt: "Blocksons Concrete boom pump arm reaching inside large steel-frame building to pour circular foundation",
+    label: "Interior Circular Pour",
+    category: "Commercial",
+  },
+  {
+    src: "/images/interior-pour-2.jpg",
+    alt: "Boom pump truck positioned outside building with arm extended through opening to complete circular concrete pour",
+    label: "Commercial Specialty Pour",
+    category: "Commercial",
+  },
+  // TODO: Replace below with real job photos from Dustin (seawall, elevated deck, residential)
   {
     src: "https://images.pexels.com/photos/32817699/pexels-photo-32817699.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
     alt: "Boom pump truck placing concrete on seawall at Lake Champlain in Plattsburgh NY",
@@ -19,34 +42,10 @@ const photos = [
     category: "Seawall",
   },
   {
-    src: "https://images.pexels.com/photos/26107203/pexels-photo-26107203.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
-    alt: "Concrete pumped into residential foundation forms in Plattsburgh NY",
-    label: "Residential Foundation — Plattsburgh",
-    category: "Foundation",
-  },
-  {
     src: "https://images.pexels.com/photos/35886615/pexels-photo-35886615.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
     alt: "Boom pump arm extended to reach elevated deck pour in Clinton County NY",
     label: "Elevated Deck Pour",
     category: "Elevated Pour",
-  },
-  {
-    src: "https://images.pexels.com/photos/18283538/pexels-photo-18283538.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
-    alt: "Large commercial slab concrete pour via boom pump in Clinton County NY",
-    label: "Commercial Slab — Clinton County",
-    category: "Commercial",
-  },
-  {
-    src: "https://images.pexels.com/photos/36782541/pexels-photo-36782541.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
-    alt: "Boom pump truck with arm fully extended on a job site in northern New York",
-    label: "Boom Arm Extended — Job Site",
-    category: "Equipment",
-  },
-  {
-    src: "https://images.pexels.com/photos/12032961/pexels-photo-12032961.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1",
-    alt: "Blocksons Concrete boom pump truck full equipment photo",
-    label: "Equipment Photo — Truck & Boom",
-    category: "Equipment",
   },
 ];
 
@@ -75,7 +74,7 @@ export default function GalleryPage() {
           </h1>
           <p className="text-[#6B7280] leading-relaxed">
             Representative work across the North Country — Lake Champlain, Clinton, Essex, and Franklin County.
-            Real job photos from Dustin will be added as they come in.
+            More photos coming — seawall and deck pours on the way.
           </p>
         </div>
       </section>
@@ -110,8 +109,7 @@ export default function GalleryPage() {
           </div>
 
           <p className="text-center text-xs text-[#6B7280] mt-8">
-            Stock photos shown until Dustin&apos;s real job photos are available. Contact us to
-            see recent work.
+            More job photos coming soon — contact us to discuss your project.
           </p>
         </div>
       </section>
