@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "Concrete Boom Pump Truck | Plattsburgh, NY | Blocksons Concrete",
   description:
     "Boom pump truck service for seawalls, foundations, elevated decks, and hard-to-reach pours. Serving the North Country — Clinton, Essex, and Franklin County, NY. Call (518) 570-3076.",
+  alternates: { canonical: "/" },
 };
 
 const services = [
@@ -71,6 +72,7 @@ export default function Home() {
           alt="Blocksons Concrete boom pump truck with arm extended over large foundation slab pour at dusk in northern New York"
           fill
           priority
+          sizes="100vw"
           className="object-cover object-center"
         />
         {/* Dark overlay so text stays readable */}

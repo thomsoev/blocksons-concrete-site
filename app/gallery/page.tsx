@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Concrete Pumping Gallery | Blocksons Concrete | Plattsburgh NY",
   description:
     "Photo gallery of boom pump concrete jobs — seawalls, foundations, elevated decks, and commercial slabs across the North Country — Clinton, Essex, and Franklin County, NY.",
+  alternates: { canonical: "/gallery" },
 };
 
 const photos = [

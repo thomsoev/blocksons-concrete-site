@@ -4,7 +4,8 @@ import { Phone, Mail, MapPin, Clock } from "lucide-react";
 export const metadata: Metadata = {
   title: "Request a Concrete Pump Quote | Plattsburgh, NY | Blocksons Concrete",
   description:
-    "Request a concrete boom pump quote from Blocksons Concrete. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
+    "Get a quote for concrete boom pump service in Plattsburgh and the North Country. Seawalls, foundations, elevated decks, commercial slabs. Call (518) 570-3076 or submit online.",
+  alternates: { canonical: "/contact" },
 };
 
 const pourTypes = [

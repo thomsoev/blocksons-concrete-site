@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "5.0 Google Reviews | Blocksons Concrete | Plattsburgh NY",
   description:
     "Blocksons Concrete — same owner as Blocksons LLC, rated 5.0 stars across 49 Google reviews. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
+  alternates: { canonical: "/reviews" },
 };
 
 export default function ReviewsPage() {

@@ -3,21 +3,35 @@ import "./globals.css";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 
+const BASE_URL = "https://blocksonsconcrete.vercel.app";
+
 export const metadata: Metadata = {
   title: "Concrete Boom Pump Truck | Plattsburgh, NY | Blocksons Concrete",
   description:
     "Blocksons Concrete provides boom pump truck service for hard-to-reach pours across the North Country — Clinton, Essex, and Franklin County, NY. Seawalls, foundations, elevated decks, and more.",
+  metadataBase: new URL(BASE_URL),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Blocksons Concrete — Boom Pump Truck Service | Plattsburgh, NY",
     description:
       "Specialized boom pump truck service for seawalls, foundations, elevated decks, and hard-to-reach pours. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
     type: "website",
+    url: BASE_URL,
+    siteName: "Blocksons Concrete",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Blocksons Concrete — Boom Pump Truck Service | Plattsburgh, NY" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blocksons Concrete — Boom Pump Truck Service | Plattsburgh, NY",
+    description: "Specialized boom pump truck service for seawalls, foundations, and hard-to-reach pours. Serving the North Country.",
   },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "HomeAndConstructionBusiness",
   name: "Blocksons Concrete",
   telephone: "(518) 570-3076",
   email: "blocksonsconcrete@gmail.com",

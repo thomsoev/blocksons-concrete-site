@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Concrete Pumping Services | Seawalls, Foundations & More | Blocksons Concrete",
   description:
     "Boom pump truck services for seawalls, foundations, elevated decks, commercial slabs, and hard-to-access sites. Serving the North Country — Clinton, Essex, and Franklin County, NY.",
+  alternates: { canonical: "/services" },
 };
 
 const services = [
